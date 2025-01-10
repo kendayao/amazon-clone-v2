@@ -60,3 +60,13 @@
     /* bolding amount */
     font-weight: 800;
 }
+
+.header__optionBasket{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header__basketCount{
+    margin: 0 10px;
+}
