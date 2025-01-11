@@ -1,5 +1,3 @@
-import { AtmOutlined } from "@mui/icons-material"
-
 export const initialState = {
     basket: []
 }
