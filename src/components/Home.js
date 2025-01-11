@@ -9,12 +9,14 @@ function Home() {
             <img className="home__image" alt="amazon banner ad" src="https://m.media-amazon.com/images/I/81mXStzsdmL._SX3000_.jpg" />
             <div className="home__row">
                 <Product 
+                id={1}
                 title="Ticova Ergonomic Office Chair - High Back Desk Chair with Adjustable Lumbar Support & Thick Seat Cushion - 140°Reclining & Rocking Mesh Computer Chair with Adjustable Headrest, Armrest" 
                 price={149.99} 
                 image="https://images-na.ssl-images-amazon.com/images/I/61Rxx9IF88L._AC_SX522_.jpg"
                 rating={5}
                 />
                 <Product
+                id={2}
                 title="KUPPET Stand Mixer, 8-Speed Tilt-Head Electric Food Stand Mixer with Dough Hook, Wire Whip & Beater, Pouring Shield, 4.7QT Stainless Steel Bowl (Red)"
                 price={129.99} 
                 image={
