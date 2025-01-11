@@ -1,10 +1,12 @@
-import React from 'react'
+import {React, Fragment} from 'react'
 import './Header.css'
+import {Outlet} from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 function Header() {
   return (
+    <Fragment>
     <div className='header'>
         <img className="header__logo" alt="amazon logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
         <div className="header__search">
@@ -29,9 +31,9 @@ function Header() {
                 <span className="header__optionLineTwo header__basketCount">0</span>
             </div>
         </div>
-        
-
     </div>
+    <Outlet/>
+    </Fragment>
   )
 }
 
