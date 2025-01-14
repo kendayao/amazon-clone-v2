@@ -4,9 +4,40 @@ import Home from"./components/Home"
 import Checkout from "./components/Checkout"
 import { Routes, Route } from "react-router-dom"
 import Login from "./components/Login"
+import React ,{useEffect} from 'react'
+import {onAuthStateChangedListener} from './firebase'
+import {useStateValue} from './components/StateProvider'
 
 
 function App() {
+   const [state, dispatch] = useStateValue();
+
+  useEffect(()=>{
+
+    const unsubscribe = onAuthStateChangedListener((authUser)=>{
+      console.log(authUser)
+
+      if(authUser){
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
+      }else{
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+
+
+
+    })
+
+    return unsubscribe
+  },[])
+
+
+
   return (
   
       
